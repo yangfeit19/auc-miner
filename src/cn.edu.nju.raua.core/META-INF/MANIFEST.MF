@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core
+Bundle-SymbolicName: cn.edu.nju.raua.core
+Bundle-Version: 1.0.0
+Bundle-Activator: cn.edu.nju.raua.core.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: cn.edu.nju.raua.core.configuration,
+ cn.edu.nju.raua.core.fpmining,
+ cn.edu.nju.raua.core.transactions,
+ cn.edu.nju.raua.utility

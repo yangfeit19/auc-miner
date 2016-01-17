@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Generator
+Bundle-SymbolicName: cn.edu.nju.raua.rulegenerator;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: cn.edu.nju.raua.generator.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ cn.edu.nju.raua.transactions;bundle-version="1.0.0",
+ cn.edu.nju.raua.fpmining.aprior;bundle-version="1.0.0",
+ cn.edu.nju.raua.core;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
