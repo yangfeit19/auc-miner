@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Client
+Bundle-SymbolicName: cn.edu.nju.aucminer.client;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: cn.edu.nju.aucminer.client.Activator
+Bundle-Vendor: Fei
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jdt.core;bundle-version="3.11.1",
+ org.eclipse.core.resources;bundle-version="3.10.1",
+ org.eclipse.ui.ide;bundle-version="3.11.0",
+ org.eclipse.core.filesystem;bundle-version="1.5.0",
+ org.eclipse.compare;bundle-version="3.5.600"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
