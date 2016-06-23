@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApiUsageChangeRuleList>
+	<ApiUsageChangeRule>
+		<Support>100</Support>
+		<Antecedent>
+			<MethodSignature>
+				<ReturnType>void</ReturnType>
+				<DefClass>android.view.View</DefClass>
+				<MethodName>setBackgroundDrawable</MethodName>
+				<ParameterList>
+					<Parameter>android.graphics.drawable.Drawable</Parameter>
+				</ParameterList>
+				<FullQualifiedName>void#android.view.View.setBackgroundDrawable(android.graphics.drawable.Drawable)</FullQualifiedName>
+			</MethodSignature>
+		</Antecedent>
+		<Consequent>
+			<MethodSignature>
+				<ReturnType>void</ReturnType>
+				<DefClass>android.view.View</DefClass>
+				<MethodName>setBackground</MethodName>
+				<ParameterList>
+					<Parameter>android.graphics.drawable.Drawable</Parameter>
+				</ParameterList>
+				<FullQualifiedName>void#android.view.View.setBackground(android.graphics.drawable.Drawable)</FullQualifiedName>
+			</MethodSignature>
+		</Consequent>
+		<UsageChangeExampleList>
+			<UsageChangeExample>
+				<OldCode>
+					<FileRelativePath>src/1.java</FileRelativePath>
+					<StartLine>3071</StartLine>
+					<EndLine>3071</EndLine>
+				</OldCode>
+				<NewCode>
+					<FileRelativePath>src/2.java</FileRelativePath>
+					<StartLine>3635</StartLine>
+					<EndLine>3635</EndLine>
+				</NewCode>
+			</UsageChangeExample>
+		</UsageChangeExampleList>
+	</ApiUsageChangeRule>
+</ApiUsageChangeRuleList>
