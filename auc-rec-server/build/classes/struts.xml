@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+  <constant name="struts.i18n.encoding" value="UTF-8"/>
+  <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+  <package name="default" extends="json-default,struts-default">
+    <action name="searchAucRules"
+         class="aucrec.server.actions.SearchAucRulesAction"
+         method="searchAucRules">
+      <result type="json"/>
+    </action>
+    <action name="downloadExampleFile"
+         class="aucrec.server.actions.DownloadExampleFileAction">
+      <result name="success" type="stream">
+        <param name="contentType">text/plain</param>
+        <param name="inputName">downloadFile</param>
+        <param name="bufferSize">1024</param>
+      </result>
+    </action>
+  </package>
+</struts>

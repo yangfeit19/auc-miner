@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+    <oldVersion>jEdit_4.1</oldVersion>
+    <newVersion>jEdit_4.2</newVersion>
+    <resultStorage>
+        <fileStorage>c:/aucminer/results/jedit_4.1-4.2/</fileStorage>
+    </resultStorage>
+    <parameters>
+        <includeField>true</includeField>
+        <splitMethod>true</splitMethod>
+        <splitThreshold>6</splitThreshold>
+        <invocationChainLen>3</invocationChainLen>
+        <minSupport>2</minSupport>
+        <minConfidence>100.0</minConfidence>
+    </parameters>
+</configuration>

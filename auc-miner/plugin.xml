@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="aucminer"
+            id="aucminer.commands.category">
+      </category>
+      <command
+            categoryId="aucminer.commands.category"
+            id="aucminer.commands.Configure"
+            name="Configure">
+      </command>
+      <command
+            categoryId="aucminer.commands.category"
+            id="aucminer.commands.MiningRules"
+            name="Mining Rules">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="aucminer.handlers.ConfigureHandler"
+            commandId="aucminer.commands.Configure">
+      </handler>
+      <handler
+            class="aucminer.handlers.MiningRulesHandler"
+            commandId="aucminer.commands.MiningRules">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="aucminer.menus.AucMiner"
+               label="AucMiner"
+               mnemonic="A">
+            <command
+                  commandId="aucminer.commands.MiningRules"
+                  id="aucminer.menus.AucMiner.MiningRules"
+                  label="Mining Rules"
+                  style="push">
+            </command>
+            <command
+                  commandId="aucminer.commands.Configure"
+                  id="aucminer.menus.AucMiner.Configure"
+                  label="Configure"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="aucminer.configuration.editor.ConfigFormEditor"
+            default="false"
+            id="aucminer.editors.ConfigFormEditor"
+            name="AUC-Miner">
+         <contentTypeBinding
+               contentTypeId="aucminer.contenttype.config">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.xml"
+            file-extensions="xml"
+            id="aucminer.contenttype.config"
+            name="Config File"
+            priority="normal">
+      </content-type>
+   </extension>
+
+</plugin>

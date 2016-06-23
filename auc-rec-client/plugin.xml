@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="AucMiner"
+            id="cn.edu.nju.aucminer.client">
+      </category>
+      <view
+            name="Replacement Suggestions"
+            icon="icons/sample.gif"
+            category="cn.edu.nju.aucminer.client"
+            class="aucrec.client.views.ApiUsageChangeRecView"
+            id="cn.edu.nju.aucminer.client.views.replacementSuggestionsView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="cn.edu.nju.aucminer.client.commands"
+            name="client category">
+      </category>
+      <command
+            categoryId="cn.edu.nju.aucminer.client.commands"
+            id="cn.edu.nju.aucminer.client.commands.Recommend"
+            name="Recommend">
+      </command>
+      <command
+            categoryId="cn.edu.nju.aucminer.client.commands"
+            id="cn.edu.nju.aucminer.client.commands.SeeExamples"
+            name="See Examples">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="aucrec.client.handlers.RecAucHandler"
+            commandId="cn.edu.nju.aucminer.client.commands.Recommend">
+      </handler>
+      <handler
+            class="aucrec.client.handlers.ReviewExamplesHandler"
+            commandId="cn.edu.nju.aucminer.client.commands.SeeExamples">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="cn.edu.nju.aucminer.client.apiadapter.menus.ApiAdapterMenu"
+               label="AucRec">
+            <command
+                  commandId="cn.edu.nju.aucminer.client.commands.Recommend"
+                  id="cn.edu.nju.aucminer.client.apiadapter.menus.Recommend"
+                  label="Recommend"
+                  mnemonic="R"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:cn.edu.nju.aucminer.client.views.replacementSuggestionsView">
+         <command
+               commandId="cn.edu.nju.aucminer.client.commands.SeeExamples"
+               label="Review Examples"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+</plugin>
